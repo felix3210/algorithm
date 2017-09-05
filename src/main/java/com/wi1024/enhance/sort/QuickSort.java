@@ -1,6 +1,6 @@
 package com.wi1024.enhance.sort;
 
-import java.util.Scanner;
+import com.wi1024.enhance.sort.util.SortUtil;
 
 /**
  * 快速排序算法
@@ -53,26 +53,10 @@ public class QuickSort {
         arr[j]  = tmp;
     }
 
-    public static void printArray(int[] array){
-        StringBuilder stringBuilder = new StringBuilder("");
-        for(int vl : array){
-            stringBuilder.append(vl + " ");
-        }
-        System.out.println("result : " + stringBuilder.toString());
-    }
-
-
     public static void main(String[] args) {
-        System.out.println("Please enter the array number :");
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        String[] inputArray = input.split(" ");
-        int[] arr = new int[inputArray.length];
-        for(int i=0;i<inputArray.length;i++){
-            arr[i] = Integer.parseInt(inputArray[i]);
-        }
+       int[] arr = SortUtil.loadConsoleIntArray();
         sort(arr, 0 ,arr.length - 1);
-        printArray(arr);
+        SortUtil.printArray(arr);
     }
 
 }

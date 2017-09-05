@@ -1,6 +1,7 @@
 **Base Sort & DataStructure Algorithm Pratice**
 
 > 排序算法
+插入排序、选择排序、交换排序、归并排序、分配排序基数排序
 
 O\left( n^{2}  \right)
 - 冒泡排序
